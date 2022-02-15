@@ -13,7 +13,22 @@
         android:theme="@style/Theme.Day2"
         >
         <activity
+            android:name=".MenuActivity"
+            android:exported="true"
+            android:label="메뉴 액티비티"
+            android:theme="@style/Theme.AppCompat.Dialog"
+            >
+
+        </activity >
+
+        <activity
             android:name=".SampleLayoutInflater"
+            android:exported="true"
+            >
+
+        </activity >
+        <activity
+            android:name=".MainActivity"
             android:exported="true"
             >
             <intent-filter >
@@ -21,13 +36,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter >
-        </activity >
-
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            >
-
         </activity >
     </application >
 
