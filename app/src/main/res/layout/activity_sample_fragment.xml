@@ -13,8 +13,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:name="com.example.day2.MainFragment"
+            tools:layout="@layout/fragment_main"
             />
-
+    
     <!--fragment는 뷰와 달라서 뷰를 담고 있는 공간만을 확보합니다-->
     <!---->
 </RelativeLayout >
