@@ -16,11 +16,12 @@
         >
         <activity
             android:name=".SampleReceiver.SmsReceiverActivity"
+            android:label="sms수신하기"
             android:exported="true"
             >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
-    
+                
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter >
         </activity >
@@ -44,7 +45,7 @@
             >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
-    
+                
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter >
         </activity >
@@ -62,7 +63,7 @@
             >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
-    
+                
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter >
         </activity >
@@ -72,7 +73,7 @@
             >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
-    
+                
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter >
         </activity >
@@ -82,7 +83,7 @@
             >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
-    
+                
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter >
         </activity >
@@ -93,7 +94,7 @@
             >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
-    
+                
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter >
         </activity >
@@ -103,7 +104,7 @@
             >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
-    
+                
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter >
         </activity >
@@ -114,7 +115,7 @@
             >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
-    
+                
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter >
         </activity >
@@ -126,7 +127,7 @@
             >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
-    
+                
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter >
         </activity >
@@ -136,7 +137,7 @@
             >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
-    
+                
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter >
         </activity >
@@ -146,7 +147,7 @@
             >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
-    
+                
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter >
         </activity >
@@ -156,7 +157,7 @@
             >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
-    
+                
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter >
         </activity >
@@ -167,7 +168,7 @@
             >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
-    
+                
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter >
         </activity >
@@ -181,7 +182,7 @@
             >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
-    
+                
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter >
         </activity >
