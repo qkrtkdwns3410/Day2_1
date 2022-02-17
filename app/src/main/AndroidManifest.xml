@@ -1,107 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        package="com.example.day2"
-        >
+		xmlns:android = "http://schemas.android.com/apk/res/android"
+		package = "com.example.day2"
+		>
+	  
+	  <application
+			  android:allowBackup = "true"
+			  android:icon = "@mipmap/ic_launcher"
+			  android:label = "@string/app_name"
+			  android:roundIcon = "@mipmap/ic_launcher_round"
+			  android:supportsRtl = "true"
+			  android:theme = "@style/Theme.AppCompat.Light.NoActionBar"
+			  >
+			<activity
+					android:name = ".SampleDrawer.MainActivity"
+					android:exported = "true"
+					android:label = "@string/title_activity_main"
+					android:theme = "@style/Theme.AppCompat.Light.NoActionBar"
+					>
+				  <intent-filter>
+						<action android:name = "android.intent.action.MAIN" />
+						
+						<category android:name = "android.intent.category.LAUNCHER" />
+				  </intent-filter>
+			</activity>
+			<activity
+					android:name = ".SamplePager.MainSamplePagerActivity"
+					android:exported = "true"
+					>
+				  <intent-filter>
+						<action android:name = "android.intent.action.MAIN" />
+						
+						<category android:name = "android.intent.category.LAUNCHER" />
+				  </intent-filter>
+			</activity>
+			<activity
+					android:name = ".SampleTab2.MainActivity"
+					android:exported = "true"
+					>
+				  <intent-filter>
+						<action android:name = "android.intent.action.MAIN" />
+						
+						<category android:name = "android.intent.category.LAUNCHER" />
+				  </intent-filter>
+			</activity>
+			<activity
+					android:name = ".SampleTab.MainActivity"
+					android:exported = "true"
+					android:theme = "@style/Theme.AppCompat.NoActionBar"
+					>
+				  <intent-filter>
+						<action android:name = "android.intent.action.MAIN" />
+						
+						<category android:name = "android.intent.category.LAUNCHER" />
+				  </intent-filter>
+			</activity>
+			<activity
+					android:name = ".SampleActionBar2.MainActivity"
+					android:exported = "true"
+					>
+				  <intent-filter>
+						<action android:name = "android.intent.action.MAIN" />
+						
+						<category android:name = "android.intent.category.LAUNCHER" />
+				  </intent-filter>
+			</activity>
+			<activity
+					android:name = ".SampleActionBar1.MainActivity"
+					android:exported = "true"
+					android:theme = "@style/Theme.AppCompat.Light"
+					>
+				  <intent-filter>
+						<action android:name = "android.intent.action.MAIN" />
+						
+						<category android:name = "android.intent.category.LAUNCHER" />
+				  </intent-filter>
+			</activity>
+			<activity
+					android:name = ".useActionBar.MainActivity"
+					android:exported = "true"
+					android:label = "액션바 사용하기"
+					android:theme = "@style/Theme.AppCompat.Light"
+					>
+				  <intent-filter>
+						<action android:name = "android.intent.action.MAIN" />
+						
+						<category android:name = "android.intent.category.LAUNCHER" />
+				  </intent-filter>
+			</activity>
+			<activity
+					android:name = ".makeScreenByFrag.MainActivity"
+					android:exported = "true"
+					>
+				  <intent-filter>
+						<action android:name = "android.intent.action.MAIN" />
+						
+						<category android:name = "android.intent.category.LAUNCHER" />
+				  </intent-filter>
+			</activity>
+			<activity
+					android:name = ".SampleFragment"
+					android:exported = "true"
+					>
+				  <intent-filter>
+						<action android:name = "android.intent.action.MAIN" />
+						
+						<category android:name = "android.intent.category.LAUNCHER" />
+				  </intent-filter>
+			</activity>
+			<activity
+					android:name = ".SampleLifeCycle"
+					android:exported = "true"
+					>
+				  <intent-filter>
+						<action android:name = "android.intent.action.MAIN" />
+						
+						<category android:name = "android.intent.category.LAUNCHER" />
+				  </intent-filter>
+			</activity>
+			<activity
+					android:name = ".SampleTask"
+					android:exported = "true"
+					android:launchMode = "singleTop"
+					>
+				  <intent-filter>
+						<action android:name = "android.intent.action.MAIN" />
+						
+						<category android:name = "android.intent.category.LAUNCHER" />
+				  </intent-filter>
+			</activity>
+			<activity
+					android:name = ".SampleParcelable"
+					android:exported = "false"
+					/>
+			<activity
+					android:name = ".SampleCallIntent"
+					android:exported = "true"
+					>
+				  <intent-filter>
+						<action android:name = "android.intent.action.MAIN" />
+						
+						<category android:name = "android.intent.category.LAUNCHER" />
+				  </intent-filter>
+			</activity>
+			<activity
+					android:name = ".MenuActivity"
+					android:exported = "true"
+					android:label = "메뉴 액티비티"
+					/>
+			<activity
+					android:name = ".SampleLayoutInflater"
+					android:exported = "true"
+					/>
+			<activity
+					android:name = ".MainActivity"
+					android:exported = "true"
+					/>
+	  </application>
 
-    <application
-            android:allowBackup="true"
-            android:icon="@mipmap/ic_launcher"
-            android:label="@string/app_name"
-            android:roundIcon="@mipmap/ic_launcher_round"
-            android:supportsRtl="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            >
-        <activity
-                android:name=".SampleActionBar1.MainActivity"
-                android:exported="true"
-                >
-            <intent-filter >
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter >
-        </activity >
-        <activity
-                android:name=".useActionBar.MainActivity"
-                android:exported="true"
-                android:label="액션바 사용하기"
-                android:theme="@style/Theme.AppCompat.Light"
-                >
-            <intent-filter >
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter >
-        </activity >
-        <activity
-                android:name=".makeScreenByFrag.MainActivity"
-                android:exported="true"
-                >
-            <intent-filter >
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter >
-        </activity >
-        <activity
-                android:name=".SampleFragment"
-                android:exported="true"
-                >
-            <intent-filter >
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter >
-        </activity >
-        <activity
-                android:name=".SampleLifeCycle"
-                android:exported="true"
-                >
-            <intent-filter >
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter >
-        </activity >
-        <activity
-                android:name=".SampleTask"
-                android:exported="true"
-                android:launchMode="singleTop"
-                >
-            <intent-filter >
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter >
-        </activity >
-        <activity
-                android:name=".SampleParcelable"
-                android:exported="false"
-                />
-        <activity
-                android:name=".SampleCallIntent"
-                android:exported="true"
-                >
-            <intent-filter >
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter >
-        </activity >
-        <activity
-                android:name=".MenuActivity"
-                android:exported="true"
-                android:label="메뉴 액티비티"
-                />
-        <activity
-                android:name=".SampleLayoutInflater"
-                android:exported="true"
-                />
-        <activity
-                android:name=".MainActivity"
-                android:exported="true"
-                />
-    </application >
-
-</manifest >
+</manifest>

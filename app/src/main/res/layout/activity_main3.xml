@@ -7,5 +7,26 @@
         android:layout_height="match_parent"
         tools:context=".SampleActionBar1.MainActivity"
         >
-
+<TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="헬로"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        
+        app:layout_constraintRight_toRightOf="parent"
+        />
+  <Button
+          android:id="@+id/button"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="액션바 아이콘 바꾸기"
+          app:layout_constraintTop_toBottomOf="@+id/textView"
+          app:layout_constraintLeft_toLeftOf="parent"
+          app:layout_constraintRight_toRightOf="parent"
+          android:layout_marginTop="24dp"
+          />
   </androidx.constraintlayout.widget.ConstraintLayout >
