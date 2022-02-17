@@ -71,18 +71,30 @@ public class MyService extends Service {
 			
 			// 참고 https://onepinetwopine.tistory.com/327
 			/*
-			 *FLAG_ACTIVITY_NEW_TASK :
-			 
+			 *FLAG_ACTIVITY_NEW_TASK : 새로운 태스크를 생성하여 그 태스크안에 액티비를 추가
+			 *FLAG_ACTIVITY_CLEAR_TOP : 만약 태스크에 호출하려는 액티비티의 인스턴스가 이미 존재하고 있을 경우에
+			 * 														새로운 인스턴스를 생성하는 것 대신에 존재하고 있는 액티비티를 포그라운드로 가져옵니다
+			 *															그리고 호출한 인스턴스를 포그라운드로 가져올때까지 있었던 위의 인스턴스들을 모두 삭제합니다.
+			 * FLAG_ACTIVITY_SINGLE_TOP : 액티비티를 호출할 때 호출된 액티비티의 인스턴스가 현재 태스크의 루트에 이미 실행중인 경우 활동이 재실행되지 않음
+			 * 															(== 새로운 인스턴스 생성 X)
 			 *
 			 * */
 			Intent showIntent = new Intent(getApplicationContext(), MainActivity.class);
+			//인텐트 객체를 new 연산자로 생성할 때
+			// 1. getApplicationContext : Context 객체를 전달합니다
+			
 			showIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
-					Intent.FLAG_ACTIVITY_SINGLE_TOP |
-					Intent.FLAG_ACTIVITY_CLEAR_TOP
+				Intent.FLAG_ACTIVITY_SINGLE_TOP |
+				Intent.FLAG_ACTIVITY_CLEAR_TOP
 			);
+			//startActitity >> 메서드를 호출시 > 새로운 태스크를 생성해야하기에  FLAG_ACTIVITY_NEW_TASK 사용
+			//FLAG_ACTIVITY_SINGLE_TOP | FLAG_ACTIVITY_CLEAR_TOP>> 메인 액티비티객체가 이미 메모리에 만들어져있을 때 재사용을 위해
+			
 			showIntent.putExtra("command", "show");
 			showIntent.putExtra("name", name + " from service.");
+			
 			startActivity(showIntent);
+			//메인 액티비티쪽으로 인텐트 객체가 전달됩니다.
 	  }
 	  
 	  @Override
