@@ -13,6 +13,28 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             >
         <activity
+                android:name=".SampleActionBar1.MainActivity"
+                android:exported="true"
+                >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter >
+        </activity >
+        <activity
+                android:name=".useActionBar.MainActivity"
+                android:exported="true"
+                android:label="액션바 사용하기"
+                android:theme="@style/Theme.AppCompat.Light"
+                >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter >
+        </activity >
+        <activity
                 android:name=".makeScreenByFrag.MainActivity"
                 android:exported="true"
                 >
