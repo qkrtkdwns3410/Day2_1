@@ -24,7 +24,6 @@ public class MyService extends Service {
 	   *
 	   * 해당 값을 반환하지 않는다는 것은 서비스가 비정상적으로 종료됨을 의미 >> 시스템을 자동으로 재시작합니다.
 	   *
-	   *
 	   * */
 	  @Override
 	  public int onStartCommand(Intent intent, int flags, int startId) {
@@ -84,8 +83,8 @@ public class MyService extends Service {
 			// 1. getApplicationContext : Context 객체를 전달합니다
 			
 			showIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
-				Intent.FLAG_ACTIVITY_SINGLE_TOP |
-				Intent.FLAG_ACTIVITY_CLEAR_TOP
+					Intent.FLAG_ACTIVITY_SINGLE_TOP |
+					Intent.FLAG_ACTIVITY_CLEAR_TOP
 			);
 			//startActitity >> 메서드를 호출시 > 새로운 태스크를 생성해야하기에  FLAG_ACTIVITY_NEW_TASK 사용
 			//FLAG_ACTIVITY_SINGLE_TOP | FLAG_ACTIVITY_CLEAR_TOP>> 메인 액티비티객체가 이미 메모리에 만들어져있을 때 재사용을 위해
