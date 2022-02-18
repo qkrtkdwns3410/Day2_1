@@ -71,8 +71,8 @@ public class MyService extends Service {
 			
 			// 참고 https://onepinetwopine.tistory.com/327
 			/*
-			 *FLAG_ACTIVITY_NEW_TASK :
-			 
+			 *FLAG_ACTIVITY_NEW_TASK : 새로운 테스크를 생성 , 그 태스크안에 액티비티를 추가
+			 *
 			 *
 			 * */
 			Intent showIntent = new Intent(getApplicationContext(), MainActivity.class);
