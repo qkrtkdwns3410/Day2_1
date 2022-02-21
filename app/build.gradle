@@ -3,11 +3,16 @@ plugins {
 }
 
 android {
+    /*빌드를 진행할 때 어떤 버전의 SDK를 사용할 것인지를 지정*/
     compileSdk 31
 
     defaultConfig {
+        /*해당 앱의 ID 값입니다.*/
         applicationId "com.example.day2"
+        /*하위 버전 어디 까지 지원할 것인가*/
+        // 앱에서 사용하는 최신 기능을 하위  단말에서 지원하지 못하는 경우 minSdk를 설정합니다.
         minSdk 21
+        //해당 앱의 검증된 버전이 어떤 SDK버전인지
         targetSdk 32
         versionCode 1
         versionName "1.0"
@@ -30,7 +35,7 @@ android {
     }
 }
 
-
+//외부 라이브러리의 추가
 dependencies {
 
     implementation 'com.github.pedroSG94:AutoPermissions:1.0.3'
