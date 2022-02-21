@@ -28,6 +28,7 @@ public class SmsActivity extends AppCompatActivity {
 			button.setOnClickListener(new View.OnClickListener() {
 				  @Override
 				  public void onClick(View v) {
+						//finish >> 해당 화면을 닫스빈다.
 						finish();
 				  }
 			});

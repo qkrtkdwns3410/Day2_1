@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
 						SimpleData data = new SimpleData(100, "Hello Android!"); // SImpleDATA 객체의 생성
 						intent.putExtra(KEY_SIMPLE_DATA, data); //인텐트에 부가 데이터 전송
 						startActivityForResult(intent, REQUEST_CODE_MENU);
+						
+						
 				  }
 			});
 	  }
