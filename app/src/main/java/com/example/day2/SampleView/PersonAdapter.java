@@ -28,8 +28,9 @@ import androidx.recyclerview.widget.RecyclerView;
  * 해당 뷰홀더 역할을 하는 클래스 > PersonAdapter클래스 안에 넣음...
  *
  * */
-public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder> {
+public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder> implements OnPersonItemClickListener {
 	  ArrayList<Person> items = new ArrayList<>();
+	  OnPersonItemClickListener listener;
 	  
 	  //onCreateViewHolder | onBindViewHolder : 뷰홀더 객체가 만들어 질때.. 사용될 때 호출됩니다.
 	  @NonNull
@@ -40,7 +41,8 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder
 			LayoutInflater inflater = LayoutInflater.from(viewGroup.getContext());
 			View itemView = inflater.inflate(R.layout.person_item, viewGroup, false);
 			
-			return new ViewHolder(itemView); //뷰홀더 객체를 생성하면서 뷰 객체를 전달... > 해당하는 뷰 홀더 객체를 반환
+			return new ViewHolder(itemView,
+				this); //뷰홀더 객체를 생성하면서 뷰 객체를 전달... > 해당하는 뷰 홀더 객체를 반환 ++  this : 리스너를 추가로 전달!
 	  }
 	  
 	  //뷰 홀더가 재사용될 때 호출.
@@ -74,10 +76,28 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder
 			items.set(position, item);
 	  }
 	  
+	  //외부에서 리스너를 설정할 수 있도록
+	  public void setOnItemListener(OnPersonItemClickListener listener) {
+			this.listener = listener;
+	  }
+	  
+	  //뷰 홀더클래스 안에서 뷰가 클릭된 경우 호출 >> 어댑터 클래스안에서 말고 밖에서 이벤트처리하는 것이 일반적이기에 밖에서 처리 리스너를 외부에서 선언!>> 리스너 객체를 변수에 할당.!
+	  @Override
+	  public void onItemClick(ViewHolder holder, View view, int position) {
+			if (listener != null) {
+				  listener.onItemClick(holder, view, position);
+			}
+	  }
+	  
 	  //뷰홀더클래스의 생성자에는 뷰 객체가 전달됩니다.
-	  static class ViewHolder extends RecyclerView.ViewHolder {
+	  public static class ViewHolder extends RecyclerView.ViewHolder {
 			TextView textView;
 			TextView textView2;
+			
+			/*생성자 호출시 리스너 객체가 파라미터로 전달됨
+			 * 해당 리스터 객체는 어댑터 밖에서 설정 > 뷰홀더까지 전달됩니다. >
+			 * 뷰가 클릭된 경우 리스너 객체 호출....
+			 * */
 			
 			public ViewHolder(View itemView, final OnPersonItemClickListener listener) {
 				  super(itemView);
@@ -89,10 +109,12 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder
 				  itemView.setOnClickListener(new View.OnClickListener() {
 						@Override
 						public void onClick(View view) {
+							  //뷰홀더에 표시할 아이템이 어댑터에서 몇 번째인지 정보를 전달합니다. (아이템의 인덱스 반환)
 							  int position = getAdapterPosition();
 							  
 							  if (listener != null) {
-									
+									//뷰 홀더 객체 , 뷰 객체, 포지션의 정보가 전달되도록...!
+									listener.onItemClick(ViewHolder.this, view, position);
 							  }
 						}
 				  });
