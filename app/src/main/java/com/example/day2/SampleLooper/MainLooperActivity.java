@@ -18,10 +18,9 @@ public class MainLooperActivity extends AppCompatActivity {
 	  
 	  Handler handler = new Handler();
 	  
-	  ProcessThread thead;
+	  ProcessThread thread;
 	  
 	  @Override
-	  
 	  protected void onCreate(Bundle savedInstanceState) {
 			super.onCreate(savedInstanceState);
 			setContentView(R.layout.activity_main_looper);
@@ -37,13 +36,14 @@ public class MainLooperActivity extends AppCompatActivity {
 						String input = editText.getText().toString();
 						Message message = Message.obtain();
 						message.obj = input;
-						
+					 
 						//새로 만든 스레드 안에 있는 핸들러로 메시지 전송하기
-						thead.processHandler.sendMessage(message);
+						thread.processHandler.sendMessage(message);
+					 
 				  }
 			});
 			
-			thead = new ProcessThread();
+			thread = new ProcessThread();
 	  }
 	  
 	  class ProcessThread extends Thread {
@@ -52,6 +52,7 @@ public class MainLooperActivity extends AppCompatActivity {
 			public void run() {
 				  Looper.prepare();
 				  Looper.loop();
+				  
 			}
 			
 			class ProcessHandler extends Handler {
@@ -68,6 +69,63 @@ public class MainLooperActivity extends AppCompatActivity {
 						});
 				  }
 			}
-			
 	  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
