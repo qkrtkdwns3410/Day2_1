@@ -16,7 +16,7 @@ import androidx.lifecycle.HasDefaultViewModelProviderFactory;
 public class MainThreadActivity extends AppCompatActivity {
 	  TextView textView;
 	  
-	  MainHandler handler;
+	  Handler handler = new Handler();
 	  
 	  @Override
 	  protected void onCreate(Bundle savedInstanceState) {
@@ -31,11 +31,8 @@ public class MainThreadActivity extends AppCompatActivity {
 				  public void onClick(View view) {
 						BackgroundThread thread = new BackgroundThread();
 						thread.start();
-						
 				  }
 			});
-			
-			handler = new MainHandler();
 	  }
 	  
 	  class BackgroundThread extends Thread {
@@ -48,19 +45,26 @@ public class MainThreadActivity extends AppCompatActivity {
 						} catch (Exception e) {
 						
 						}
-						
+					 
 						value += 1;
 						Log.d("Thread", "value : " + value);
-						
-						//obtainMessage : 메시지 객체를 하나 참조
-						Message message = handler.obtainMessage();
-						
-						Bundle bundle = new Bundle();
-						bundle.putInt("value", value);
-						message.setData(bundle);
-						
-						//핸들러로 메시지 객체를 전송
-						handler.sendMessage(message);
+					 
+						handler.post(new Runnable() {
+							  @Override
+							  public void run() {
+									textView.setText("value 값  : " + value);
+							  }
+						});
+						// //obtainMessage : 메시지 객체를 하나 참조
+						// Message message = handler.obtainMessage();
+						//
+						// Bundle bundle = new Bundle();
+						// bundle.putInt("value", value);
+						// message.setData(bundle);
+						//
+						// //핸들러로 메시지 객체를 전송
+						// handler.sendMessage(message);
+					 
 				  }
 			}
 	  }
