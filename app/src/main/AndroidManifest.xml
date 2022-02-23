@@ -6,7 +6,8 @@
     <!-- 해당 앱에서 SMS을 수신하기 위한 권한입니다. -->
     <uses-permission android:name="android.permission.RECEIVE_SMS" /> <!-- 외부 스토리지를 읽고 쓰는 권한입니다. -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 인터넷 권한입니다. << 위험권한 -->
+    <uses-permission android:name="android.permission.INTERNET" />
     
     <application
         android:allowBackup="true"
@@ -15,7 +16,59 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:usesCleartextTraffic="true"
         >
+        <activity
+            android:name=".SampleThread.MainThreadActivity"
+            android:exported="true"
+            >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+    
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter >
+        </activity >
+        <activity
+            android:name=".SampleKeypad.MainKeypadActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden"
+            >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+    
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter >
+        </activity >
+        <activity
+            android:name=".SampleSeek.MainSeekbarActivity"
+            android:exported="true"
+            >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+    
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter >
+        </activity >
+        <activity
+            android:name=".SampleWeb.MainWebViewActivity"
+            android:exported="true"
+            >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+    
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter >
+        </activity >
+        <activity
+            android:name=".SamplePageSliding.MainActivity"
+            android:exported="true"
+            >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+    
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter >
+        </activity >
         <activity
             android:name=".SampleTweenAnimation.MainActivity"
             android:exported="true"

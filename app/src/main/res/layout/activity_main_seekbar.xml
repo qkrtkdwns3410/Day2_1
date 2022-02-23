@@ -6,23 +6,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SampleTweenAnimation.MainActivity"
+    tools:context=".SampleSeek.MainSeekbarActivity"
     >
     
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="확대"
+        android:max="100"
         />
     
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="확대/축소"
+        android:layout_marginTop="20dp"
+        android:text="변경된 값"
+        android:textSize="30sp"
         />
 
 </LinearLayout >

@@ -15,14 +15,24 @@ public class MainActivity extends AppCompatActivity {
 	  protected void onCreate(Bundle savedInstanceState) {
 			super.onCreate(savedInstanceState);
 			setContentView(R.layout.activity_main_anim);
-			
+		 
 			Button button = findViewById(R.id.button);
 			button.setOnClickListener(new View.OnClickListener() {
 				  @Override
 				  public void onClick(View view) {
 						//AnimationUtils 클래스의 loadAnimation() 메서드  >> XML 리소스에 정의된 애니메이션 액션 정보 로딩합니다.
 						Animation anim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.scale);
-						
+					 
+						view.startAnimation(anim);
+				  }
+			});
+			Button button2 = findViewById(R.id.button2);
+			button2.setOnClickListener(new View.OnClickListener() {
+				  @Override
+				  public void onClick(View view) {
+						//AnimationUtils 클래스의 loadAnimation() 메서드  >> XML 리소스에 정의된 애니메이션 액션 정보 로딩합니다.
+						Animation anim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.scale2);
+					 
 						view.startAnimation(anim);
 				  }
 			});
