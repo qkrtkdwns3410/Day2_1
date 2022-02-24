@@ -31,7 +31,7 @@ public class MainAsyncTaskActivity extends AppCompatActivity {
 						task.execute();
 				  }
 			});
-			
+		 
 			Button button2 = findViewById(R.id.button2);
 			button2.setOnClickListener(new View.OnClickListener() {
 				  @Override
@@ -41,15 +41,18 @@ public class MainAsyncTaskActivity extends AppCompatActivity {
 			});
 	  }
 	  
+	  //백그라운드 작업을 수행할 클래스
+	  //AsyncTask<Integer, Integer, Integer> : 오버라이딩한 메서드 doInBackground onProgressUpdate onPostExecute 의 파라메터를 결정합니다.
 	  class BackgroundTask extends AsyncTask<Integer, Integer, Integer> {
 			
 			@Override
-			protected void onPreExecute() {
+			protected void onPreExecute() { //초기화 단계에서 사용합니다.
 				  value = 0;
 				  progressBar.setProgress(value);
 				  
 			}
 			
+			//태스크 객체 안에서 백그라운드 작업 수행하도록 하기
 			@Override
 			protected Integer doInBackground(Integer... integers) {
 				  
@@ -59,6 +62,7 @@ public class MainAsyncTaskActivity extends AppCompatActivity {
 						if (value >= 100) {
 							  break;
 						} else {
+							  //UI 에 업데이트를 위해
 							  publishProgress(value);
 							  
 						}
@@ -73,6 +77,7 @@ public class MainAsyncTaskActivity extends AppCompatActivity {
 				  return value;
 			}
 			
+			//doInBackground.. : 메서드 안에서 publishProgress() 메서드 호출될 때 마다 자동으로 호출..
 			@Override
 			protected void onProgressUpdate(Integer... values) {
 				  progressBar.setProgress(values[0].intValue());

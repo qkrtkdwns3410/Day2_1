@@ -9,9 +9,10 @@
     tools:context=".SampleAsyncTask.MainAsyncTaskActivity"
     >
     
-    <androidx.core.widget.ContentLoadingProgressBar
+    <ProgressBar
         android:id="@+id/progress_circular"
         android:layout_width="match_parent"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_height="10dp"
         android:max="100"
         />

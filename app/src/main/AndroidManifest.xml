@@ -19,6 +19,46 @@
         android:usesCleartextTraffic="true"
         >
         <activity
+            android:name=".SampleRequest.MainVolleyActivity"
+            android:exported="true"
+            >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+    
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter >
+        </activity >
+        <activity
+            android:name=".SampleHttp.MainHttpActivity"
+            android:exported="true"
+            >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+    
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter >
+        </activity >
+        <activity
+            android:name=".SampleSocket.MainSocketActivity"
+            android:exported="true"
+            >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+    
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter >
+        </activity >
+        <activity
+            android:name=".SampleThreadAnimation.MainThreadAnimationActivity"
+            android:exported="true"
+            >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+    
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter >
+        </activity >
+        <activity
             android:name=".SampleAsyncTask.MainAsyncTaskActivity"
             android:exported="true"
             >
