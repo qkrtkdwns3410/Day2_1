@@ -19,6 +19,26 @@
         android:usesCleartextTraffic="true"
         >
         <activity
+            android:name=".SampleDatabase2.MainDatabase2Activity"
+            android:exported="true"
+            >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+    
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter >
+        </activity >
+        <activity
+            android:name=".SampleDatabase.MainDatabaseActivity"
+            android:exported="true"
+            >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+    
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter >
+        </activity >
+        <activity
             android:name=".SampleRequest.MainVolleyActivity"
             android:exported="true"
             >
