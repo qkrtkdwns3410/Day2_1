@@ -7,6 +7,35 @@
         <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day22/app/src/main/res/layout/activity_sample_intent.xml" value="0.30092592592592593" />
         <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day22/app/src/main/res/layout/activity_sample_layout_inflater.xml" value="0.23703703703703705" />
         <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day22/app/src/main/res/layout/sub1.xml" value="0.264" />
+        <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day2_1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.228" />
+        <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day2_1/app/src/main/res/drawable/side_nav_bar.xml" value="0.367" />
+        <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day2_1/app/src/main/res/layout/activity_main4.xml" value="0.3115942028985507" />
+        <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day2_1/app/src/main/res/layout/activity_main_anim.xml" value="0.32038834951456313" />
+        <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day2_1/app/src/main/res/layout/activity_main_async_task.xml" value="0.30954587581093607" />
+        <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day2_1/app/src/main/res/layout/activity_main_database.xml" value="0.30954587581093607" />
+        <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day2_1/app/src/main/res/layout/activity_main_database2.xml" value="0.30954587581093607" />
+        <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day2_1/app/src/main/res/layout/activity_main_delayed.xml" value="0.30954587581093607" />
+        <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day2_1/app/src/main/res/layout/activity_main_http.xml" value="0.30954587581093607" />
+        <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day2_1/app/src/main/res/layout/activity_main_keypad.xml" value="0.30954587581093607" />
+        <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day2_1/app/src/main/res/layout/activity_main_looper.xml" value="0.30954587581093607" />
+        <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day2_1/app/src/main/res/layout/activity_main_nine_patch.xml" value="0.3779487179487179" />
+        <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day2_1/app/src/main/res/layout/activity_main_page_sliding.xml" value="0.2697340650063318" />
+        <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day2_1/app/src/main/res/layout/activity_main_recycle.xml" value="0.32376530181511187" />
+        <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day2_1/app/src/main/res/layout/activity_main_sample_receiver.xml" value="0.387037037037037" />
+        <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day2_1/app/src/main/res/layout/activity_main_sample_view.xml" value="0.3933333333333333" />
+        <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day2_1/app/src/main/res/layout/activity_main_seekbar.xml" value="0.30954587581093607" />
+        <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day2_1/app/src/main/res/layout/activity_main_service.xml" value="0.24791666666666667" />
+        <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day2_1/app/src/main/res/layout/activity_main_socket.xml" value="0.30954587581093607" />
+        <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day2_1/app/src/main/res/layout/activity_main_spinner.xml" value="0.32376530181511187" />
+        <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day2_1/app/src/main/res/layout/activity_main_thread.xml" value="0.32376530181511187" />
+        <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day2_1/app/src/main/res/layout/activity_main_thread_animation.xml" value="0.30954587581093607" />
+        <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day2_1/app/src/main/res/layout/activity_main_volley.xml" value="0.30954587581093607" />
+        <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day2_1/app/src/main/res/layout/activity_main_web_view.xml" value="0.264" />
+        <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day2_1/app/src/main/res/layout/activity_sample_view.xml" value="0.32376530181511187" />
+        <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day2_1/app/src/main/res/layout/activity_sms.xml" value="0.15677966101694915" />
+        <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day2_1/app/src/main/res/layout/layout1.xml" value="0.28544949026876737" />
+        <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day2_1/app/src/main/res/layout/person_item.xml" value="0.32376530181511187" />
+        <entry key="..\:/Users/ipeac/AndroidStudioProjects/Day2_1/app/src/main/res/layout/simple_spinner_item.xml" value="0.32376530181511187" />
         <entry key="..\:/project/Day2_1/app/src/main/res/layout/activity_actionbar_main.xml" value="0.3578125" />
         <entry key="..\:/project/Day2_1/app/src/main/res/layout/activity_fragment_main.xml" value="0.21041666666666667" />
         <entry key="..\:/project/Day2_1/app/src/main/res/layout/activity_main.xml" value="0.23958333333333334" />
@@ -43,7 +72,7 @@
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

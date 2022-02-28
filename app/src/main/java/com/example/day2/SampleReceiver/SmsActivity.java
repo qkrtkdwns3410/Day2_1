@@ -24,10 +24,11 @@ public class SmsActivity extends AppCompatActivity {
 			editText2 = findViewById(R.id.editText2);
 			editText3 = findViewById(R.id.editText3);
 			
-			Button button = findViewById(R.id.button);
+			Button button = findViewById(R.id.button1);
 			button.setOnClickListener(new View.OnClickListener() {
 				  @Override
 				  public void onClick(View v) {
+						//finish >> 해당 화면을 닫스빈다.
 						finish();
 				  }
 			});
